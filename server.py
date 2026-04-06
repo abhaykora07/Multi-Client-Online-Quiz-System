@@ -114,10 +114,10 @@ def run_quiz(conn, name):
 
     conn.sendall(f"\nQuiz Finished! Your score: {score}\n".encode())
 
-    # 🔥 Broadcast leaderboard to ALL clients
+
     broadcast_leaderboard()
 
-    # 🔥 Keep connection alive (important)
+   
     while True:
         try:
             time.sleep(5)
