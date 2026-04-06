@@ -28,8 +28,8 @@ def start():
     name = input("Enter your name: ")
 
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    client.connect((SERVER_IP, PORT))   # 🔥 auto connect
-
+    client.connect((SERVER_IP, PORT))  
+    
     client.sendall(name.encode())
 
     threading.Thread(target=receive, args=(client,), daemon=True).start()
